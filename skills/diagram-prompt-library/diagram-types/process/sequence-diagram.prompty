@@ -1,0 +1,10 @@
+---
+name: Sequence Diagram
+description: Diagram type — Sequence Diagram
+tags: [diagram-type, process, aspect-3:4]
+inputs:
+  subject:
+    type: string
+    default: an OAuth2 authorization code flow
+---
+Create a UML sequence diagram showing interactions between actors and systems over time. Show lifelines, synchronous and asynchronous messages, return values, activation bars, and alt/loop/opt fragments where appropriate. The subject of this diagram is: {{subject}}.

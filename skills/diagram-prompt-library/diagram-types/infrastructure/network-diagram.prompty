@@ -1,0 +1,10 @@
+---
+name: Network Diagram
+description: Diagram type — Network Diagram
+tags: [diagram-type, infrastructure, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: a small office LAN with router, switch, firewall, and three hosts
+---
+Create a network architecture diagram showing hosts, routers, switches, firewalls, and connections between them. Use standard networking iconography. Show network segments, subnets, and data flow directions with labeled connections. The subject of this diagram is: {{subject}}.

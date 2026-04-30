@@ -1,0 +1,10 @@
+---
+name: Radar / Spider Chart
+description: Diagram type — Radar / Spider Chart
+tags: [diagram-type, data-viz, aspect-1:1]
+inputs:
+  subject:
+    type: string
+    default: comparing two products across six feature dimensions
+---
+Create a radar chart (spider chart) with labeled axes radiating from a center point. Plot data as a filled polygon connecting values on each axis. Use distinct colors and semi-transparent fills for multiple data series. Include axis labels, a scale, a legend, and a descriptive title. The subject of this diagram is: {{subject}}.

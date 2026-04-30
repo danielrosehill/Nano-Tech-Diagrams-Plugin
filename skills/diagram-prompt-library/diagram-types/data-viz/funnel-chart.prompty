@@ -1,0 +1,10 @@
+---
+name: Funnel Chart
+description: Diagram type — Funnel Chart
+tags: [diagram-type, data-viz, aspect-3:4]
+inputs:
+  subject:
+    type: string
+    default: a signup-to-paid-customer conversion funnel
+---
+Create a funnel chart showing stages in a process with progressively narrowing horizontal bars or trapezoid sections. Label each stage with its name, value, and conversion percentage. Use distinct colors for each stage. Include a descriptive title. The funnel should clearly show drop-off between stages. The subject of this diagram is: {{subject}}.

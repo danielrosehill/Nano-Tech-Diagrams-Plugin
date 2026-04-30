@@ -1,0 +1,10 @@
+---
+name: Line Chart
+description: Diagram type — Line Chart
+tags: [diagram-type, data-viz, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: website traffic over the past 12 months
+---
+Create a line chart with clearly labeled X and Y axes, a descriptive title, and smooth or pointed data lines with visible data point markers. Use distinct colors for multiple series. Include a clean grid background, legend, and axis labels with units. Show trends clearly with appropriate scale and range. The subject of this diagram is: {{subject}}.

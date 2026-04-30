@@ -1,0 +1,10 @@
+---
+name: Flowchart
+description: Diagram type — Flowchart
+tags: [diagram-type, process, aspect-3:4]
+inputs:
+  subject:
+    type: string
+    default: a user login process with password reset branch
+---
+Create a flowchart showing a step-by-step process with decision points, actions, and outcomes. Use standard flowchart shapes: rectangles for processes, diamonds for decisions, parallelograms for I/O, and rounded rectangles for start/end. Show clear directional flow with labeled arrows. The subject of this diagram is: {{subject}}.

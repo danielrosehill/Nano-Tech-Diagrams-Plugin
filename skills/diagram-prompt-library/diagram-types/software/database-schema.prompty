@@ -1,0 +1,10 @@
+---
+name: Database Schema / ER Diagram
+description: Diagram type — Database Schema / ER Diagram
+tags: [diagram-type, software, aspect-4:3]
+inputs:
+  subject:
+    type: string
+    default: users, orders, products, and order_items tables
+---
+Create an entity-relationship (ER) diagram showing database tables, columns, primary keys, foreign keys, and relationships (one-to-one, one-to-many, many-to-many). Use standard ER notation with crow's foot or UML cardinality. The subject of this diagram is: {{subject}}.

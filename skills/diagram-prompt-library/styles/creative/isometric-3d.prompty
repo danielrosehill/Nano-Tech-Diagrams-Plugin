@@ -1,0 +1,6 @@
+---
+name: Isometric 3D
+description: Style preset — Isometric 3D
+tags: [style, creative, aspect-4:3]
+---
+Render as an isometric 3D-style diagram on a clean white background. Render boxes and containers as isometric 3D blocks with subtle depth and soft shadows. Use a modern, cheerful color palette with distinct colors for different components. Arrows and connectors should follow isometric angles. Labels should float cleanly above their elements. The result should look like a polished isometric tech illustration -- the kind you'd see in a modern SaaS landing page or developer documentation.

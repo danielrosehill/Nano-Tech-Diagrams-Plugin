@@ -1,0 +1,6 @@
+---
+name: Terminal Hacker
+description: Style preset — Terminal Hacker
+tags: [style, technical, aspect-4:3]
+---
+Render as a retro computer terminal display on a pure black background. Use phosphor green (#00FF00) as the primary color for all text, lines, and shapes. Add a subtle CRT scan-line effect and slight screen curvature glow at the edges. Use a monospace terminal font for all text. Boxes should be drawn with ASCII-style borders. The result should look like output from a 1980s mainframe terminal -- minimal, technical, and unmistakably computer-native.

@@ -1,0 +1,10 @@
+---
+name: Server Rack / Data Center
+description: Diagram type — Server Rack / Data Center
+tags: [diagram-type, infrastructure, aspect-3:4]
+inputs:
+  subject:
+    type: string
+    default: a 42U rack with servers, storage, and top-of-rack switches
+---
+Create a data center or server rack diagram showing physical or logical server layout, storage arrays, network switches, and cabling. Show redundancy paths and failover connections. The subject of this diagram is: {{subject}}.

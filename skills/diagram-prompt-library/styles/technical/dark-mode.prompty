@@ -1,0 +1,6 @@
+---
+name: Dark Mode Technical
+description: Style preset — Dark Mode Technical
+tags: [style, technical, aspect-auto]
+---
+Render as a technical diagram with a dark charcoal or near-black background. Use light-colored text (white or light grey) and neon or high-contrast accent colors like cyan, green, and orange for lines, arrows, and highlights. Use a monospace or technical font for labels. Add subtle grid lines or dot patterns in the background. The result should look like a technical blueprint or engineering schematic -- precise, detailed, and developer-friendly.

@@ -1,0 +1,6 @@
+---
+name: Translated (Hebrew)
+description: Style preset — Translated (Hebrew)
+tags: [style, language, aspect-auto]
+---
+Render with all text labels translated to Hebrew. Preserve all diagram structure, shapes, arrows, and layout -- but replace every English text label with its Hebrew translation. Hebrew text should read right-to-left and use clear, modern Hebrew typography. Ensure translated labels fit naturally within their shapes and containers. Use clean, professional styling with colorful icons and clear visual hierarchy on a clean white background. The result should be a fully Hebrew-language version that reads naturally for a Hebrew speaker.

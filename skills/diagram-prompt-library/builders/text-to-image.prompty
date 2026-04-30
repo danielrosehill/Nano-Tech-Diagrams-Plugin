@@ -1,0 +1,20 @@
+---
+name: Text to Image Builder
+description: Compose a text-to-image prompt from a diagram type, user subject, and style
+tags: [builder, text-to-image]
+inputs:
+  diagram_type_prompt:
+    type: string
+    default: "Create a clean, polished tech diagram."
+  user_prompt:
+    type: string
+    default: ""
+  style_prompt:
+    type: string
+    default: ""
+---
+{{diagram_type_prompt}}
+
+{{user_prompt}}
+
+Visual style: {{style_prompt}}

@@ -1,0 +1,10 @@
+---
+name: Org Chart / Hierarchy
+description: Diagram type — Org Chart / Hierarchy
+tags: [diagram-type, conceptual, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: an engineering organization with CTO, directors, and teams
+---
+Create an organizational chart or hierarchy diagram showing reporting structure with boxes for each role/entity connected by lines showing relationships. Support multiple levels with clear top-down or left-to-right layout. The subject of this diagram is: {{subject}}.

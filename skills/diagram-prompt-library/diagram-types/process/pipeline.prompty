@@ -1,0 +1,10 @@
+---
+name: CI/CD Pipeline
+description: Diagram type — CI/CD Pipeline
+tags: [diagram-type, process, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: a GitHub Actions pipeline deploying to staging and production
+---
+Create a CI/CD pipeline diagram showing build, test, and deployment stages. Include source control triggers, build steps, test suites, artifact storage, staging environments, and production deployment with approval gates. The subject of this diagram is: {{subject}}.

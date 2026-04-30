@@ -1,0 +1,6 @@
+---
+name: GitHub README
+description: Style preset — GitHub README
+tags: [style, technical, aspect-16:9]
+---
+Render as a clean diagram optimized for GitHub README files on a pure white background with clean edges and no border. Use GitHub's familiar color palette -- blues (#0969DA), greens (#1A7F37), purples (#8250DF), and neutral greys. Shapes should be clean rounded rectangles with subtle borders. Use a system sans-serif font. Add simple, recognizable developer icons (git branches, terminal prompts, API endpoints, databases). The result should look like a native GitHub diagram that blends seamlessly into a README.

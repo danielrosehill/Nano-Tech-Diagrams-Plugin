@@ -1,0 +1,25 @@
+---
+name: Image to Image Builder
+description: Compose an image-to-image transformation prompt
+tags: [builder, image-to-image]
+inputs:
+  diagram_type_prompt:
+    type: string
+    default: "a clean, polished diagram"
+  user_prompt:
+    type: string
+    default: ""
+  style_prompt:
+    type: string
+    default: ""
+  dictionary_words:
+    type: string
+    default: ""
+---
+Transform this image into: {{diagram_type_prompt}}
+
+{{user_prompt}}
+
+Visual style: {{style_prompt}}
+
+The following specific terms appear in this image and should be spelled exactly as listed: {{dictionary_words}}

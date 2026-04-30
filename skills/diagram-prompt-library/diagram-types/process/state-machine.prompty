@@ -1,0 +1,10 @@
+---
+name: State Machine
+description: Diagram type — State Machine
+tags: [diagram-type, process, aspect-4:3]
+inputs:
+  subject:
+    type: string
+    default: an order lifecycle from created to delivered or cancelled
+---
+Create a state machine diagram showing states as rounded rectangles, transitions as labeled arrows, initial and final states, and guard conditions. Show all possible state transitions with their triggering events. The subject of this diagram is: {{subject}}.

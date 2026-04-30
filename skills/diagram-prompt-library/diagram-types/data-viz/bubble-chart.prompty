@@ -1,0 +1,10 @@
+---
+name: Bubble Chart
+description: Diagram type — Bubble Chart
+tags: [diagram-type, data-viz, aspect-4:3]
+inputs:
+  subject:
+    type: string
+    default: country GDP vs life expectancy with population as bubble size
+---
+Create a bubble chart plotting data points as circles where X position, Y position, and bubble size each represent a variable. Label axes clearly with units. Use color coding for categories with a legend. Include a size reference in the legend. Add a descriptive title. Ensure bubbles are visually distinct and not overly overlapping. The subject of this diagram is: {{subject}}.

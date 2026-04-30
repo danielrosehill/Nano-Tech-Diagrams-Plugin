@@ -1,0 +1,10 @@
+---
+name: Mind Map
+description: Diagram type — Mind Map
+tags: [diagram-type, conceptual, aspect-1:1]
+inputs:
+  subject:
+    type: string
+    default: topics in modern web development
+---
+Create a mind map radiating outward from a central concept. Main branches should represent major themes, with sub-branches for details. Use color coding to distinguish different branches. Keep text concise and use icons where helpful. The subject of this diagram is: {{subject}}.

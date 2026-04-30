@@ -1,0 +1,10 @@
+---
+name: Histogram
+description: Diagram type — Histogram
+tags: [diagram-type, data-viz, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: distribution of API response times
+---
+Create a histogram showing the frequency distribution of a dataset. Use contiguous bars (no gaps) with clearly labeled bins on the X axis and frequency counts on the Y axis. Include a descriptive title and axis labels. Optionally overlay a distribution curve. Use a clean grid background for readability. The subject of this diagram is: {{subject}}.

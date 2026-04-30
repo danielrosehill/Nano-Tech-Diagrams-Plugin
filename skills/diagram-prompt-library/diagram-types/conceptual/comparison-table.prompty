@@ -1,0 +1,10 @@
+---
+name: Comparison Table / Matrix
+description: Diagram type — Comparison Table / Matrix
+tags: [diagram-type, conceptual, aspect-4:3]
+inputs:
+  subject:
+    type: string
+    default: comparing three cloud providers across pricing, regions, and services
+---
+Create a structured comparison table or feature matrix with clear rows and columns, headers, and cell content. Use checkmarks, X marks, or color coding to indicate feature support or status. Include a legend if needed. The subject of this diagram is: {{subject}}.

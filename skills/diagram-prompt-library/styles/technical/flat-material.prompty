@@ -1,0 +1,6 @@
+---
+name: Flat Material
+description: Style preset — Flat Material
+tags: [style, technical, aspect-auto]
+---
+Render as a flat Material Design-styled diagram on a clean light grey (#FAFAFA) background. Use the Material Design color palette -- primary blues, teals, and deep oranges with clean flat fills and subtle elevation shadows on cards and containers. Round the corners of all shapes. Use a Roboto-style sans-serif font for all text. Icons should be simple outlined material-style icons. The result should look like a screen from a well-designed Android app -- clean, systematic, and modern.

@@ -1,0 +1,10 @@
+---
+name: Heatmap
+description: Diagram type — Heatmap
+tags: [diagram-type, data-viz, aspect-1:1]
+inputs:
+  subject:
+    type: string
+    default: user activity by hour of day and day of week
+---
+Create a heatmap with a grid of cells colored by intensity value. Include a color scale legend showing the value-to-color mapping. Label rows and columns clearly. Use a sequential or diverging color palette appropriate to the data. Include a descriptive title and optionally show values within each cell. The subject of this diagram is: {{subject}}.

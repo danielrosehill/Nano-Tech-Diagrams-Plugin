@@ -1,0 +1,10 @@
+---
+name: Pie Chart
+description: Diagram type — Pie Chart
+tags: [diagram-type, data-viz, aspect-1:1]
+inputs:
+  subject:
+    type: string
+    default: market share of five competitors
+---
+Create a pie chart showing proportional segments with distinct colors for each slice. Label each slice with its category name and percentage value. Use a clean layout with a legend and descriptive title. Optionally pull out or highlight one key segment for emphasis. Ensure the color palette provides clear visual distinction between adjacent slices. The subject of this diagram is: {{subject}}.

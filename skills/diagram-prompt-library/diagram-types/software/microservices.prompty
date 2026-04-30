@@ -1,0 +1,10 @@
+---
+name: Microservices Map
+description: Diagram type — Microservices Map
+tags: [diagram-type, software, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: an e-commerce platform with order, payment, inventory, and notification services
+---
+Create a microservices architecture diagram showing individual services, API gateways, service mesh, message brokers, and databases. Show synchronous and asynchronous communication patterns between services. The subject of this diagram is: {{subject}}.

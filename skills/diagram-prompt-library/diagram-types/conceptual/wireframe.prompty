@@ -1,0 +1,10 @@
+---
+name: Wireframe / UI Mockup
+description: Diagram type — Wireframe / UI Mockup
+tags: [diagram-type, conceptual, aspect-9:16]
+inputs:
+  subject:
+    type: string
+    default: a mobile app login screen
+---
+Create a wireframe or UI mockup showing page layout, navigation elements, content areas, buttons, forms, and interactive components. Use a low-fidelity grayscale style with placeholder text and simple shapes to represent UI elements. The subject of this diagram is: {{subject}}.

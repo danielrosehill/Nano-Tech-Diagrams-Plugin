@@ -1,0 +1,17 @@
+---
+name: Whiteboard Cleanup Builder
+description: Compose a whiteboard photo cleanup prompt with optional style and dictionary
+tags: [builder, whiteboard]
+inputs:
+  style_prompt:
+    type: string
+    default: ""
+  dictionary_words:
+    type: string
+    default: ""
+---
+Take this whiteboard photograph and transform it into a polished diagram. Remove the physical whiteboard, markers, frame, and any background elements. Correct any perspective distortion so the output appears as a perfectly straight-on, top-down view regardless of the angle the original photo was taken from. Preserve all the original content, text, and diagrams. Where handwriting is ambiguous, infer the correct spelling from context rather than reproducing the raw strokes literally -- for example, a word that looks like 'proxknox' should be rendered as 'Proxmox' if that is the obvious intended meaning.
+
+{{style_prompt}}
+
+The following specific terms appear in this whiteboard and should be spelled exactly as listed: {{dictionary_words}}

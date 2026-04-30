@@ -1,0 +1,10 @@
+---
+name: System Architecture
+description: Diagram type — System Architecture
+tags: [diagram-type, software, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: a SaaS web app with frontend, API, worker, and database
+---
+Create a software system architecture diagram showing major components, services, APIs, databases, and message queues. Show how data flows between components. Distinguish between frontend, backend, and data layers. The subject of this diagram is: {{subject}}.

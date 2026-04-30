@@ -1,0 +1,10 @@
+---
+name: Gantt Chart / Timeline
+description: Diagram type — Gantt Chart / Timeline
+tags: [diagram-type, conceptual, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: a 3-month software release timeline
+---
+Create a Gantt chart or project timeline showing tasks, durations, dependencies, and milestones along a horizontal time axis. Use colored bars for different task categories and diamond markers for milestones. Show the critical path. The subject of this diagram is: {{subject}}.

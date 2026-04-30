@@ -1,0 +1,10 @@
+---
+name: Decision Tree
+description: Diagram type — Decision Tree
+tags: [diagram-type, process, aspect-4:3]
+inputs:
+  subject:
+    type: string
+    default: choosing a database type for a new project
+---
+Create a decision tree diagram branching from a root question through multiple decision nodes to leaf outcomes. Each branch should be clearly labeled with the condition or choice. Use consistent spacing and alignment for readability. The subject of this diagram is: {{subject}}.

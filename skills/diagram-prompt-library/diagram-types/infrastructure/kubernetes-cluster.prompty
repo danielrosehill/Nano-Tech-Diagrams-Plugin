@@ -1,0 +1,10 @@
+---
+name: Kubernetes Cluster
+description: Diagram type — Kubernetes Cluster
+tags: [diagram-type, infrastructure, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: a 3-node cluster running a web app with ingress and a database
+---
+Create a Kubernetes cluster diagram showing nodes, pods, services, ingress controllers, namespaces, and persistent volumes. Use standard Kubernetes iconography. Show the relationship between deployments, replica sets, and pods. The subject of this diagram is: {{subject}}.

@@ -1,0 +1,10 @@
+---
+name: API Architecture
+description: Diagram type — API Architecture
+tags: [diagram-type, software, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: a REST API with auth, rate limiting, and three backend services
+---
+Create an API architecture diagram showing endpoints, request/response flows, authentication layers, rate limiting, and backend service connections. Show the API gateway pattern with routing and middleware. The subject of this diagram is: {{subject}}.

@@ -1,0 +1,10 @@
+---
+name: Cloud Architecture
+description: Diagram type — Cloud Architecture
+tags: [diagram-type, infrastructure, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: a multi-region AWS web application
+---
+Create a cloud infrastructure architecture diagram showing cloud services, regions, availability zones, and their interconnections. Use recognizable cloud service icons (compute, storage, database, networking). Show data flow and service dependencies. The subject of this diagram is: {{subject}}.

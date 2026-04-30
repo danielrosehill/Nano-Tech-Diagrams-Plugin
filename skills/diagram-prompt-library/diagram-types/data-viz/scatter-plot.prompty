@@ -1,0 +1,10 @@
+---
+name: Scatter Plot / Correlation
+description: Diagram type — Scatter Plot / Correlation
+tags: [diagram-type, data-viz, aspect-4:3]
+inputs:
+  subject:
+    type: string
+    default: ad spend versus signups across campaigns
+---
+Create a scatter plot showing the relationship between two variables. Plot data points as distinct dots with clearly labeled X and Y axes, units, and a descriptive title. Optionally include a trend line or regression line to show correlation direction and strength. Use color or shape coding for multiple data groups with a clear legend. The subject of this diagram is: {{subject}}.

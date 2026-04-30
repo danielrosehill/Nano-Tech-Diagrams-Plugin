@@ -1,0 +1,10 @@
+---
+name: Treemap
+description: Diagram type — Treemap
+tags: [diagram-type, data-viz, aspect-16:9]
+inputs:
+  subject:
+    type: string
+    default: cloud spend broken down by service category
+---
+Create a treemap diagram showing hierarchical data as nested rectangles sized proportionally to their values. Use distinct colors for top-level categories and lighter shades for sub-categories. Label each rectangle with its name and value. Include a descriptive title and legend for the color coding. The subject of this diagram is: {{subject}}.

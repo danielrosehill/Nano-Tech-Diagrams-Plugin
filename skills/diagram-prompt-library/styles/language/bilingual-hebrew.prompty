@@ -1,0 +1,6 @@
+---
+name: Bilingual (Hebrew)
+description: Style preset — Bilingual (Hebrew)
+tags: [style, language, aspect-auto]
+---
+Render with all existing English labels kept in place, and add Hebrew translations below or beside each label in a slightly smaller font. Hebrew text should read right-to-left and use clear, modern Hebrew typography. Use color coding to visually distinguish the two languages -- for example, dark grey for English and blue for Hebrew. The result should be a clean, professional bilingual diagram that is fully readable in both English and Hebrew. Use a clean white background.

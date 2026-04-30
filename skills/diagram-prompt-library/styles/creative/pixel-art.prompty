@@ -1,0 +1,6 @@
+---
+name: Pixel Art
+description: Style preset — Pixel Art
+tags: [style, creative, aspect-1:1]
+---
+Render as a pixel art-styled diagram reminiscent of 16-bit era video games on a clean background. Render all elements using visible, chunky pixels with a limited retro color palette. Shapes should be blocky with aliased edges. Text should use a pixel font. Add small pixel-art icons -- tiny servers, computers, clouds, gears -- next to relevant labels. Use dithering patterns for shading. The result should look like a UI screen from a classic strategy or simulation game -- charming and nostalgic.
