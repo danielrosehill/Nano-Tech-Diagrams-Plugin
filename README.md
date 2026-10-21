@@ -59,6 +59,22 @@ You can always pass an explicit output path to any generation skill.
 - Sample corpus: [Sample-Whiteboards](https://github.com/danielrosehill/Sample-Whiteboards)
 - Underlying model: Fal AI's [Nano Banana 2](https://fal.ai/models/fal-ai/nano-banana-2)
 
+## Customising tool names
+
+The skills name tools by their bare name on the `nano-tech-diagrams` MCP server and work out the callable
+name at run time. A direct install (`mcp__nano-tech-diagrams__<tool>`) needs no setup. If your MCP client
+or gateway names them differently, put a `config.json` in the plugin's data directory
+(`$CLAUDE_USER_DATA/nano-tech-diagrams/`, else `$XDG_DATA_HOME/claude-plugins/nano-tech-diagrams/`, else
+`~/.local/share/claude-plugins/nano-tech-diagrams/`). It stays local and is never part of the plugin:
+
+```json
+{
+  "tool_prefix": "mcp__gateway__nano-tech-diagrams__"
+}
+```
+
+The tool names match the server's own, so a prefix is usually all you need.
+
 ## License
 
 MIT

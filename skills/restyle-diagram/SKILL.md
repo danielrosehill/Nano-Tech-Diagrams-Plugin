@@ -5,6 +5,21 @@ description: Use when the user has an existing diagram or screenshot and wants t
 
 # Restyle Diagram
 
+## Tool names (portable)
+
+Tools are named here by their bare name on the `nano-tech-diagrams` MCP server (e.g. `text_to_image`). Resolve
+the callable name once per session:
+
+1. **Local override.** If `config.json` exists in this plugin's data directory
+   (`$CLAUDE_USER_DATA/nano-tech-diagrams/`, else `$XDG_DATA_HOME/claude-plugins/nano-tech-diagrams/`, else
+   `~/.local/share/claude-plugins/nano-tech-diagrams/`), call `<tool_prefix><name>`. If it also has a
+   `tools` map, take `<name>` from it first. A name mapped to `null` has no equivalent on that
+   setup: say so and use the fallback that `notes` gives.
+2. **Otherwise,** use the loaded tool whose name ends in `nano-tech-diagrams__<name>`. A direct install
+   is `mcp__nano-tech-diagrams__<name>`; a proxy or gateway adds its own prefix.
+3. **Otherwise** the server isn't connected. Stop and point the user to: the README's "Install the MCP" section (`claude mcp add nano-tech-diagrams -- npx -y nano-tech-diagrams-mcp`, plus `FAL_KEY`).
+
+
 Transform an existing diagram, screenshot, or sketch into a new visual style. The MCP tool `image_to_image` accepts a source image, target style (preset or free-text brief), and optional preservation directives.
 
 ## When to use
@@ -25,7 +40,7 @@ Transform an existing diagram, screenshot, or sketch into a new visual style. Th
 
 1. If the MCP is not installed, show the user: `claude mcp add nano-tech-diagrams -- npx -y nano-tech-diagrams-mcp` and stop.
 2. Validate that the source image path is readable; fail with a clear message if not found.
-3. Call `mcp__nano-tech-diagrams__image_to_image` with source_image (base64 or URL), target_style, preservation_directives.
+3. Call `image_to_image` with source_image (base64 or URL), target_style, preservation_directives.
 4. Extract the base64 PNG from the response.
 5. Compute output path (use default if not specified), ensuring parent directories exist.
 6. Write the base64 as PNG to disk.
