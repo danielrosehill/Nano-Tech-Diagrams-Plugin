@@ -41,6 +41,7 @@ Transform an existing diagram, screenshot, or sketch into a new visual style. Th
 1. If the MCP is not installed, show the user: `claude mcp add nano-tech-diagrams -- npx -y nano-tech-diagrams-mcp` and stop.
 2. Validate that the source image path is readable; fail with a clear message if not found.
 3. Call `image_to_image` with source_image (base64 or URL), target_style, preservation_directives.
+   Local file but the tool needs a URL? Stage it with `cloud-storage:stage-file` (`stage.sh <file>` → presigned URL; delete after). Don't improvise another route. (Gateway tools can't read laptop paths; large base64 fails.)
 4. Extract the base64 PNG from the response.
 5. Compute output path (use default if not specified), ensuring parent directories exist.
 6. Write the base64 as PNG to disk.

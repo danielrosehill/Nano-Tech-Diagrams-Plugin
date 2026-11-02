@@ -41,6 +41,7 @@ Transform a messy whiteboard photo, paper sketch, or napkin diagram into a clean
 1. If the MCP is not installed, show the user: `claude mcp add nano-tech-diagrams -- npx -y nano-tech-diagrams-mcp` and stop.
 2. Validate that the source photo path is readable; fail with a clear message if not found.
 3. Call `whiteboard_cleanup` with source_image, target_style, generate_comparison.
+   Local file but the tool needs a URL? Stage it with `cloud-storage:stage-file` (`stage.sh <file>` → presigned URL; delete after). Don't improvise another route. (Gateway tools can't read laptop paths; large base64 fails.)
 4. Extract base64 PNG(s) from the response.
 5. Compute output path(s), ensuring parent directories exist.
 6. Write cleaned diagram to disk.
