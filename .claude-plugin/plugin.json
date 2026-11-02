@@ -1,6 +1,6 @@
 {
   "name": "nano-tech-diagrams",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Generate, transform, and clean up tech diagrams and whiteboard photos via the Nano Banana 2 model (Fal AI). Wraps the nano-tech-diagrams MCP server with a curated prompt library across 5 diagram families and 28+ visual styles.",
   "author": {
     "name": "Daniel Rosehill",
