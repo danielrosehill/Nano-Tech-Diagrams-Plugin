@@ -1,0 +1,56 @@
+{
+  "_note": "Aliases map to one model on one or more providers. List prices in USD per ~1K image, checked 2026-10-28 (fal). Replicate prices were not recorded: null means check the model page. Override or add aliases in <data dir>/models.json.",
+  "default": {"t2i": "flare", "edit": "flare"},
+  "provider_order": ["fal", "replicate"],
+  "models": {
+    "flare": {
+      "label": "GPT Image 2.5 Flare",
+      "fal": {
+        "t2i": "openai/gpt-image-2.5/flare/text-to-image",
+        "edit": "openai/gpt-image-2.5/flare/edit",
+        "image_param": "image_urls",
+        "aspect": {"param": "image_size", "map": {"16:9": "landscape_16_9", "4:3": "landscape_4_3", "1:1": "square_hd", "3:4": "portrait_4_3", "9:16": "portrait_16_9"}},
+        "args": {"quality": "medium", "output_format": "png"},
+        "usd": {"t2i": 0.012, "edit": 0.015}
+      },
+      "replicate": {
+        "t2i": "openai/gpt-image-2.5-flare",
+        "edit": "openai/gpt-image-2.5-flare",
+        "image_param": "input_images",
+        "aspect": {"param": "aspect_ratio"},
+        "args": {"quality": "medium", "output_format": "png"},
+        "usd": {"t2i": null, "edit": null}
+      }
+    },
+    "klein": {
+      "label": "FLUX.3 Klein",
+      "fal": {
+        "t2i": "blackforestlabs/flux-3/klein/text-to-image",
+        "edit": "blackforestlabs/flux-3/klein/edit-image",
+        "image_param": "image_urls",
+        "aspect": {"param": "image_size", "map": {"16:9": "landscape_16_9", "4:3": "landscape_4_3", "1:1": "square_hd", "3:4": "portrait_4_3", "9:16": "portrait_16_9"}},
+        "args": {"enable_prompt_expansion": false, "output_format": "png"},
+        "usd": {"t2i": 0.009, "edit": 0.009}
+      }
+    },
+    "nano": {
+      "label": "Nano Banana 2.1",
+      "fal": {
+        "t2i": "google/nano-banana-2.1",
+        "edit": "google/nano-banana-2.1/edit",
+        "image_param": "image_urls",
+        "aspect": {"param": "aspect_ratio"},
+        "args": {"resolution": "1K", "output_format": "png"},
+        "usd": {"t2i": 0.04, "edit": 0.044}
+      },
+      "replicate": {
+        "t2i": "google/nano-banana-2.1",
+        "edit": "google/nano-banana-2.1",
+        "image_param": "image_input",
+        "aspect": {"param": "aspect_ratio"},
+        "args": {"resolution": "1K", "output_format": "png"},
+        "usd": {"t2i": null, "edit": null}
+      }
+    }
+  }
+}

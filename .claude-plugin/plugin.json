@@ -1,19 +1,21 @@
 {
-  "name": "nano-tech-diagrams",
-  "version": "1.1.1",
-  "description": "Generate, transform, and clean up tech diagrams and whiteboard photos via the Nano Banana 2 model (Fal AI). Wraps the nano-tech-diagrams MCP server with a curated prompt library across 5 diagram families and 28+ visual styles.",
+  "name": "tech-comms-diagrams",
+  "version": "2.0.0",
+  "description": "Tech diagrams for blogs and docs: Mermaid, text-to-image and whiteboard-to-diagram on fal or Replicate, with label and arrow checks.",
   "author": {
     "name": "Daniel Rosehill",
     "url": "https://github.com/danielrosehill"
   },
-  "repository": "https://github.com/danielrosehill/Nano-Tech-Diagrams-Plugin",
+  "repository": "https://github.com/danielrosehill/Tech-Comms-Diagrams",
   "license": "MIT",
   "keywords": [
     "diagrams",
+    "mermaid",
     "whiteboard",
+    "technical-writing",
+    "tech-communications",
     "fal-ai",
-    "image-generation",
-    "tech-diagrams",
-    "visual-communication"
+    "replicate",
+    "image-generation"
   ]
 }

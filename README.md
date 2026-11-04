@@ -1,79 +1,58 @@
-# Nano-Tech-Diagrams Plugin
+# Tech Comms Diagrams
 
-Generate, transform, and clean up tech diagrams and whiteboard photos via Fal AI's Nano Banana 2 model. Wraps the `nano-tech-diagrams` MCP server with seven skills and a curated prompt library across 5 diagram families and 28+ visual styles.
+Agent skills for making technical diagrams for blog posts, READMEs and documentation.
+
+General image tools optimise for good-looking pictures. A technical diagram has a harder requirement: one misspelt label or backwards arrow makes it wrong. So this plugin only uses models tested for exact text and correct arrows, and checks every result against what was asked for.
 
 ## Skills
 
-- `generate-tech-diagram` — text-to-image diagram generation (network, flowchart, K8s, mind map, etc.)
-- `restyle-diagram` — transform an existing image into a different visual style
-- `cleanup-whiteboard` — turn whiteboard / sketch photos into polished diagrams
-- `list-diagram-styles` — browse the 28+ visual style presets
-- `list-diagram-types` — browse the diagram-type presets
-- `diagram-prompt-library` — curated, known-good prompt templates by family and style
-- `whiteboard-to-publishable` — full pipeline: photo → cleaned diagram → comparison + caption
+| Skill | Job |
+|---|---|
+| `pick-diagram-route` | Choose Mermaid, a generative model, or both |
+| `mermaid-diagram` | Write and render Mermaid to SVG or PNG |
+| `generate-diagram` | Text to image, with exact labels |
+| `sketch-to-diagram` | Whiteboard or notepad photo to clean diagram, restyled image, or Mermaid |
+| `restyle-diagram` | New look for an existing diagram or Mermaid render |
+| `verify-diagram` | Check labels, invented text, arrows, legibility and meaning |
+| `illustrate-text` | Find where a text needs graphics, then make and place them with alt text |
+| `diagram-prompt-library` | 28 style presets and 33 diagram-type templates |
+
+## How it keeps text accurate
+
+1. **Labels are written down first.** Every string goes in the prompt in quotes. For a sketch, the agent transcribes the photo before any image model runs.
+2. **Only tested models are used.** See [`references/model-routing.md`](references/model-routing.md) for the results and how much evidence is behind them.
+3. **Every image is read back,** word by word and arrow by arrow, with a retry ladder that ends at Mermaid.
 
 ## Requirements
 
-This plugin is a wrapper. The actual generation runs through the `nano-tech-diagrams` MCP server, which must be installed and configured with a Fal AI API key.
-
-### 1. Install the MCP
-
-```bash
-claude mcp add nano-tech-diagrams -- npx -y nano-tech-diagrams-mcp
-```
-
-Or pin via npm globally and reference the binary directly. See [nano-tech-diagrams-mcp on GitHub](https://github.com/danielrosehill/Nano-Tech-Diagrams-MCP).
-
-### 2. Set the Fal AI API key
-
-Export `FAL_KEY` (or `FAL_AI_API_KEY`) in the environment Claude Code launches the MCP from.
-
-### 3. (Optional) Install the `image-annotation` plugin
-
-The `whiteboard-to-publishable` orchestrator can optionally use it for side-by-side comparison images and redaction. Without it, the orchestrator degrades gracefully.
+- Python 3 (standard library only)
+- Node, for Mermaid (`mmdc`, or `npx` fetches it)
+- `FAL_KEY` and/or `REPLICATE_API_TOKEN` for generation. Mermaid needs neither.
 
 ## Installation
 
 ```bash
-# User scope (always available):
-claude plugins install nano-tech-diagrams@danielrosehill
-
-# Or project scope (run inside the target repo):
-claude plugins install nano-tech-diagrams@danielrosehill --scope project
+claude plugins install tech-comms-diagrams@danielrosehill
 ```
 
-## Data storage
+## Customising
 
-Generated images and projects default to:
+Your own settings go in the data directory, `${CLAUDE_USER_DATA:-${XDG_DATA_HOME:-$HOME/.local/share}/claude-plugins}/tech-comms-diagrams/`. `TECH_COMMS_DIAGRAMS_DATA` overrides that path.
 
-```
-${CLAUDE_USER_DATA:-${XDG_DATA_HOME:-$HOME/.local/share}/claude-plugins}/nano-tech-diagrams/
-```
+- `models.json`: add or override model aliases, defaults and provider order
+- `styles/<name>.prompty`: add a house style, or replace a built-in of the same name
 
-You can always pass an explicit output path to any generation skill.
+Built-ins are read from the plugin, so they keep getting updates.
 
-## Credits
+## History
 
-- Generation engine: [Nano-Tech-Diagrams-MCP](https://github.com/danielrosehill/Nano-Tech-Diagrams-MCP)
-- Prompt library substrate: [Tech-Diagram-Image-Gen-Prompts](https://github.com/danielrosehill/Tech-Diagram-Image-Gen-Prompts) (vendored snapshot)
-- Sample corpus: [Sample-Whiteboards](https://github.com/danielrosehill/Sample-Whiteboards)
-- Underlying model: Fal AI's [Nano Banana 2](https://fal.ai/models/fal-ai/nano-banana-2)
+Formerly `nano-tech-diagrams` (Nano-Tech-Diagrams-Plugin), renamed and overhauled in version 2.0.0 on 2026-11-04. It wrapped one model through an MCP server. This version calls fal and Replicate directly, adds Mermaid and verification, and no longer needs the MCP server.
 
-## Customising tool names
+## Related
 
-The skills name tools by their bare name on the `nano-tech-diagrams` MCP server and work out the callable
-name at run time. A direct install (`mcp__nano-tech-diagrams__<tool>`) needs no setup. If your MCP client
-or gateway names them differently, put a `config.json` in the plugin's data directory
-(`$CLAUDE_USER_DATA/nano-tech-diagrams/`, else `$XDG_DATA_HOME/claude-plugins/nano-tech-diagrams/`, else
-`~/.local/share/claude-plugins/nano-tech-diagrams/`). It stays local and is never part of the plugin:
-
-```json
-{
-  "tool_prefix": "mcp__gateway__nano-tech-diagrams__"
-}
-```
-
-The tool names match the server's own, so a prefix is usually all you need.
+- [Tech-Graphics-Benchmark](https://github.com/danielrosehill/Tech-Graphics-Benchmark): the evaluation behind the model choices
+- [Tech-Diagram-Image-Gen-Prompts](https://github.com/danielrosehill/Tech-Diagram-Image-Gen-Prompts): source of the prompt library
+- [Sample-Whiteboards](https://github.com/danielrosehill/Sample-Whiteboards): sample inputs
 
 ## License
 

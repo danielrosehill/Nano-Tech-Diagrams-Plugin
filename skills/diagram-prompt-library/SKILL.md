@@ -1,37 +1,21 @@
 ---
 name: diagram-prompt-library
-description: Use when the user wants a curated, known-good prompt template to start from, organised by diagram family and style category.
+description: Browse visual style presets and diagram-type templates for tech diagrams (blueprint, chalkboard, flowchart, K8s, network topology).
 ---
 
-# Diagram Prompt Library
+# Diagram prompt library
 
-Browse a curated library of diagram prompt templates organized by diagram family (conceptual, data-viz, infrastructure, process, software) and style category (creative, language, professional, retro-fun, technical). Prompts are vendored from `danielrosehill/Tech-Diagram-Image-Gen-Prompts` and live under `${plugin_root}/skills/diagram-prompt-library/prompts/`.
+Style and diagram-type snippets to drop into a prompt built with `references/prompt-recipe.md`. Files are `.prompty`: YAML frontmatter, then the prompt text. `PROMPTS.md` explains the format.
 
-## When to use
+- `styles/<category>/`: `professional`, `technical`, `creative`, `retro-fun`, `language`
+- `diagram-types/<family>/`: `conceptual`, `data-viz`, `infrastructure`, `process`, `software`
 
-- User wants a starting template instead of writing a description from scratch
-- User wants to see example diagram descriptions organized by use case
-- User is exploring what types of diagrams are possible
+## Steps
 
-## Inputs to gather
+1. List files in the category that fits, filtered by the user's request. For a technical audience start with `professional` and `technical`.
+2. Check the overlay first: a file in `<data dir>/styles/` with the same name replaces the built-in, and a new name adds a house style.
+3. Use the body as part 2 (style) or part 3 (layout) of the recipe. Add the exact strings yourself: the templates don't carry them.
 
-- **Diagram family** (optional) — e.g. `conceptual`, `data-viz`, `infrastructure`, `process`, or `software`
-- **Style category** (optional) — e.g. `creative`, `language`, `professional`, `retro-fun`, or `technical`
-- User may ask for all prompts, or filter by family, style, or both
+The data dir is `${CLAUDE_USER_DATA:-${XDG_DATA_HOME:-$HOME/.local/share}/claude-plugins}/tech-comms-diagrams/`.
 
-## Procedure
-
-1. If the prompt files are not present under `${plugin_root}/skills/diagram-prompt-library/prompts/`, explain to the user that this skill requires the prompt library to be vendored first and suggest cloning from the source repo.
-2. List available prompt files, optionally filtered by the user's family/style preferences.
-3. Display the selected prompt(s) as formatted text with headers showing family, style, and a brief title.
-4. Encourage the user to customize the prompt or use it as-is, then hand off to `generate-tech-diagram` with the description.
-
-## Output / side effects
-
-- User sees formatted prompt text(s) in the chat.
-- No files created or modified.
-
-## Safety / constraints
-
-- This is a reference/curation skill — no MCP calls, no image generation.
-- If prompts are missing, provide a clear message about manual setup rather than trying to fetch from the remote.
+`diagram-types/data-viz/` covers the look of a chart only. Charts of real numbers should be plotted in code.
