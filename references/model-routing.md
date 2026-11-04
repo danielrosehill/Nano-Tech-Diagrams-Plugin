@@ -29,6 +29,6 @@ Without listed labels, the failures were handwriting copied as written, misreads
 
 ## Providers
 
-`flare` and `nano` run on fal and Replicate; `klein` is configured on fal only. The benchmark ran on fal. On Replicate only `flare` has been tested, and its prices aren't recorded here, so check the model page. `--provider auto` uses the first provider in `provider_order` with a key set.
+`flare` and `nano` run on fal and Replicate; `klein` is configured on fal only. The benchmark ran on fal. On Replicate only `flare` has been tested, and its prices aren't recorded here, so check the model page. Without a saved preference, the first of them with a key set is used. See `backends.md` for choosing a provider, ComfyUI and custom routes.
 
 To add or override a model, put a `models.json` with the same shape in the data directory. It's merged over the built-in file by alias.

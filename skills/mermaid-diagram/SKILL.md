@@ -22,7 +22,7 @@ description: Write and render a Mermaid diagram (flowchart, sequence, ER, state,
    A non-zero exit means a syntax error. Fix the source from the message.
 4. Open a PNG render and check the layout: crossing edges, clipped labels, text too small at display width. Change the direction (`LR` or `TD`) or split the diagram if needed.
 5. Keep the `.mmd` beside the output so it can be edited later.
-6. If the user wants a designed look, hand the PNG to `restyle-diagram`.
+6. If the user wants a designed look, hand the PNG to `image-to-image`.
 
 ## Notes
 

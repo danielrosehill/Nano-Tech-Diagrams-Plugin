@@ -1,7 +1,7 @@
 {
   "name": "tech-comms-diagrams",
-  "version": "2.0.0",
-  "description": "Tech diagrams for blogs and docs: Mermaid, text-to-image and whiteboard-to-diagram on fal or Replicate, with label and arrow checks.",
+  "version": "2.1.0",
+  "description": "Tech diagrams for blogs and docs: Mermaid, text-to-image and image-to-image on fal, Replicate, ComfyUI or your own route, with label and arrow checks.",
   "author": {
     "name": "Daniel Rosehill",
     "url": "https://github.com/danielrosehill"
@@ -16,6 +16,7 @@
     "tech-communications",
     "fal-ai",
     "replicate",
-    "image-generation"
+    "image-generation",
+    "comfyui"
   ]
 }

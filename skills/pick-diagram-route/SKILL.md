@@ -12,9 +12,9 @@ Decide how to make a technical graphic before making it. State the choice in one
 | Accuracy above all, many nodes, or edits in version control | Mermaid | `mermaid-diagram` |
 | Docs or a README where the source should stay editable | Mermaid | `mermaid-diagram` |
 | Colour, style or personality, 8 nodes or fewer, short labels | Generative | `generate-diagram` |
-| A hand-drawn whiteboard or notepad sketch as the input | Image to image | `sketch-to-diagram` |
-| An existing diagram or screenshot that needs a new look | Image to image | `restyle-diagram` |
-| Correct structure and a designed look | Mermaid first, then restyle | `mermaid-diagram`, then `restyle-diagram` |
+| A hand-drawn whiteboard or notepad sketch as the input | Image to image | `image-to-image` |
+| An existing diagram or screenshot that needs a new look | Image to image | `image-to-image` |
+| Correct structure and a designed look | Mermaid first, then restyle | `mermaid-diagram`, then `image-to-image` |
 | Prose that needs a graphic, type not yet known | Start from the text | `illustrate-text` |
 | Charts of real numbers | Neither: plot the data in code | none |
 
